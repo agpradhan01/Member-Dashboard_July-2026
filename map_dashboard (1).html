@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Center Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+  :root{
+    --paper:#EEF2ED;
+    --paper-2:#E4EAE1;
+    --ink:#1F2E28;
+    --ink-soft:#54655C;
+    --line:#CBD5C6;
+    --accent:#3C6E55;
+    --accent-2:#2C5240;
+    --white:#FBFAF7;
+    --scale-low:#F5E9C8;
+    --scale-mid:#D69A52;
+    --scale-high:#A6412B;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;height:100%;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* ---------- Password gate (same as profile dashboard) ---------- */
+  #gate{
+    position:fixed;inset:0;
+    background:var(--ink);
+    color:var(--paper);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:2000;
+    flex-direction:column;
+    gap:18px;
+    padding:24px;
+  }
+  #gate.hidden{display:none;}
+  #gate .mark{
+    font-family:'Fraunces',serif;
+    font-size:15px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--paper-2);
+    opacity:0.7;
+  }
+  #gate h1{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:28px;
+    margin:0;
+    text-align:center;
+  }
+  #gate form{display:flex;gap:8px;margin-top:6px;}
+  #gate input[type=password]{
+    font-family:'JetBrains Mono',monospace;
+    font-size:14px;
+    padding:12px 14px;
+    border-radius:3px;
+    border:1px solid #445a4f;
+    background:#28382F;
+    color:var(--white);
+    width:220px;
+    outline:none;
+  }
+  #gate input[type=password]:focus{border-color:var(--accent);}
+  #gate button{
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:14px;
+    padding:12px 18px;
+    border-radius:3px;
+    border:none;
+    background:var(--accent);
+    color:var(--white);
+    cursor:pointer;
+  }
+  #gate button:hover{background:#4a8267;}
+  #gate .err{color:#E0A986;font-size:13px;height:16px;}
+
+  /* ---------- Header ---------- */
+  header.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 24px;
+    border-bottom:1px solid var(--line);
+    background:var(--white);
+    flex-wrap:wrap;
+    gap:10px;
+    z-index:10;
+  }
+  header.top .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent-2);
+    margin-bottom:2px;
+  }
+  header.top h1{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:24px;
+    margin:0;
+  }
+  .legend{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+  }
+  .legend .dots{display:flex;align-items:flex-end;gap:6px;}
+  .legend .dot{
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--scale-low), var(--scale-high));
+  }
+
+  /* ---------- Map ---------- */
+  #mapContainer{flex:1;position:relative;}
+  #map{position:absolute;inset:0;}
+
+  /* ---------- Profile card (popup) ---------- */
+  .leaflet-popup-content-wrapper{
+    border-radius:6px;
+    padding:0;
+    background:var(--white);
+  }
+  .leaflet-popup-content{margin:0;width:340px !important;}
+  .leaflet-popup-tip{background:var(--white);}
+  .card{
+    padding:20px 22px;
+  }
+  .card .org-name{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:19px;
+    margin:0 0 2px;
+    line-height:1.2;
+  }
+  .card .org-meta{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    margin-bottom:14px;
+  }
+  .card .facts{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:5px;
+    overflow:hidden;
+  }
+  .card .fact{
+    background:var(--white);
+    padding:9px 10px;
+  }
+  .card .fact .label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:9.5px;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:3px;
+    line-height:1.3;
+  }
+  .card .fact .value{
+    font-family:'Fraunces',serif;
+    font-size:15px;
+    font-weight:500;
+    color:var(--ink);
+  }
+
+  #statusMsg{
+    position:absolute;
+    top:16px;left:50%;
+    transform:translateX(-50%);
+    background:var(--white);
+    border:1px solid var(--line);
+    padding:10px 16px;
+    border-radius:5px;
+    font-size:13px;
+    color:var(--ink-soft);
+    z-index:500;
+    display:none;
+  }
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="mark">Restricted View</div>
+  <h1>Enter password to continue</h1>
+  <form id="gateForm">
+    <input type="password" id="gatePw" placeholder="Password" autocomplete="off">
+    <button type="submit">Enter</button>
+  </form>
+  <div class="err" id="gateErr"></div>
+</div>
+
+<header class="top">
+  <div>
+    <div class="eyebrow">Organization Map</div>
+    <h1>Health Center Locations</h1>
+  </div>
+  <div class="legend">
+    <span>Fewer patients</span>
+    <div class="dots">
+      <div class="dot" style="width:8px;height:8px;"></div>
+      <div class="dot" style="width:14px;height:14px;"></div>
+      <div class="dot" style="width:22px;height:22px;"></div>
+    </div>
+    <span>More patients</span>
+  </div>
+</header>
+
+<div id="mapContainer">
+  <div id="map"></div>
+  <div id="statusMsg"></div>
+</div>
+
+<script>
+/* ============================================================
+   PASSWORD — change before sharing. Light deterrent only.
+   ============================================================ */
+const PASSWORD = "changeme";
+
+const gate = document.getElementById('gate');
+const gateForm = document.getElementById('gateForm');
+const gatePw = document.getElementById('gatePw');
+const gateErr = document.getElementById('gateErr');
+
+if (sessionStorage.getItem('gate_ok') === '1') gate.classList.add('hidden');
+
+gateForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  if (gatePw.value === PASSWORD) {
+    sessionStorage.setItem('gate_ok', '1');
+    gate.classList.add('hidden');
+  } else {
+    gateErr.textContent = "Incorrect password.";
+    gatePw.value = "";
+  }
+});
+
+/* ============================================================
+   MAP SETUP
+   View is centered/zoomed to comfortably include the mainland US,
+   Hawaii, Alaska, and Caribbean/Pacific territories on one
+   pannable world map (no separate insets needed — just pan/zoom).
+   ============================================================ */
+const map = L.map('map', { worldCopyJump: true }).setView([25, -105], 3);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors',
+  maxZoom: 12
+}).addTo(map);
+
+const statusMsg = document.getElementById('statusMsg');
+
+/* ============================================================
+   COLOR + SIZE SCALE (by patient count)
+   ============================================================ */
+function colorForCount(count, min, max){
+  const t = max > min ? (count - min) / (max - min) : 0.5;
+  // interpolate between low (#F5E9C8) and high (#A6412B)
+  const c1 = [245, 233, 200];
+  const c2 = [166, 65, 43];
+  const r = Math.round(c1[0] + (c2[0]-c1[0]) * t);
+  const g = Math.round(c1[1] + (c2[1]-c1[1]) * t);
+  const b = Math.round(c1[2] + (c2[2]-c1[2]) * t);
+  return `rgb(${r},${g},${b})`;
+}
+
+function radiusForCount(count, min, max){
+  const t = max > min ? (count - min) / (max - min) : 0.5;
+  return 6 + t * 18; // 6px to 24px
+}
+
+/* ============================================================
+   DATA — loaded from orgs.json (same folder as this file).
+   Each org needs: lat, lng, patientCount, plus a "facts" object
+   with the 9 profile card fields (label -> display string).
+   Regenerate orgs.json from build_dashboard_data.R.
+   ============================================================ */
+async function loadData(){
+  statusMsg.style.display = 'block';
+  statusMsg.textContent = 'Loading organizations…';
+  try {
+    const res = await fetch('orgs.json');
+    if (!res.ok) throw new Error('orgs.json not found');
+    const orgs = await res.json();
+    statusMsg.style.display = 'none';
+    renderMarkers(orgs);
+  } catch (err) {
+    statusMsg.textContent = "Could not load orgs.json — make sure it's in the same folder and you're viewing this via a web server, not a local double-clicked file.";
+    console.error(err);
+  }
+}
+
+function renderMarkers(orgs){
+  const counts = orgs.map(o => Number(o.patientCount) || 0);
+  const min = Math.min(...counts);
+  const max = Math.max(...counts);
+
+  orgs.forEach(org => {
+    const count = Number(org.patientCount) || 0;
+    const marker = L.circleMarker([org.lat, org.lng], {
+      radius: radiusForCount(count, min, max),
+      fillColor: colorForCount(count, min, max),
+      fillOpacity: 0.85,
+      color: '#FBFAF7',
+      weight: 2
+    }).addTo(map);
+
+    const factEntries = Object.entries(org.facts || {});
+
+    const popupHtml = `
+      <div class="card">
+        <div class="org-name">${org.name}</div>
+        <div class="org-meta">${org.grantNumber} · ${org.state}</div>
+        <div class="facts">
+          ${factEntries.map(([label, value]) => `
+            <div class="fact">
+              <div class="label">${label}</div>
+              <div class="value">${value}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+
+    marker.bindPopup(popupHtml, { maxWidth: 360 });
+  });
+}
+
+loadData();
+</script>
+
+</body>
+</html>

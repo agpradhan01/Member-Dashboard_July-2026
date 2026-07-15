@@ -1,0 +1,97 @@
+[
+  {
+    "grantNumber": "H80CS00001",
+    "name": "Placeholder Community Health Center",
+    "state": "Hawaii",
+    "lat": 21.3069,
+    "lng": -157.8583,
+    "patientCount": 18240,
+    "facts": {
+      "Patient Count": "18,240",
+      "Patient Growth Trend": "+9% since 2021",
+      "Racial/Ethnic Minority Patients": "12,100",
+      "Patients on Public Insurance": "68%",
+      "Patients at 100%+ FPL": "54%",
+      "Served in Language Other Than English": "31%",
+      "Clinical Quality Change (2021-2024)": "+6 pts",
+      "Cost per Patient": "$682",
+      "FTE Count (incl. pre/post-grad)": "134"
+    }
+  },
+  {
+    "grantNumber": "H80CS00002",
+    "name": "Placeholder Family Health Partners",
+    "state": "New Jersey",
+    "lat": 40.0583,
+    "lng": -74.4057,
+    "patientCount": 13050,
+    "facts": {
+      "Patient Count": "13,050",
+      "Patient Growth Trend": "+4% since 2021",
+      "Racial/Ethnic Minority Patients": "9,830",
+      "Patients on Public Insurance": "61%",
+      "Patients at 100%+ FPL": "47%",
+      "Served in Language Other Than English": "22%",
+      "Clinical Quality Change (2021-2024)": "-2 pts",
+      "Cost per Patient": "$714",
+      "FTE Count (incl. pre/post-grad)": "92"
+    }
+  },
+  {
+    "grantNumber": "H80CS00003",
+    "name": "Placeholder Riverside Clinic Network",
+    "state": "Oregon",
+    "lat": 44.0582,
+    "lng": -121.3153,
+    "patientCount": 29870,
+    "facts": {
+      "Patient Count": "29,870",
+      "Patient Growth Trend": "+14% since 2021",
+      "Racial/Ethnic Minority Patients": "15,220",
+      "Patients on Public Insurance": "72%",
+      "Patients at 100%+ FPL": "58%",
+      "Served in Language Other Than English": "19%",
+      "Clinical Quality Change (2021-2024)": "+11 pts",
+      "Cost per Patient": "$599",
+      "FTE Count (incl. pre/post-grad)": "211"
+    }
+  },
+  {
+    "grantNumber": "H80CS00004",
+    "name": "Placeholder Isla Verde Health Center",
+    "state": "Puerto Rico",
+    "lat": 18.4655,
+    "lng": -66.1057,
+    "patientCount": 21430,
+    "facts": {
+      "Patient Count": "21,430",
+      "Patient Growth Trend": "+2% since 2021",
+      "Racial/Ethnic Minority Patients": "20,900",
+      "Patients on Public Insurance": "81%",
+      "Patients at 100%+ FPL": "39%",
+      "Served in Language Other Than English": "88%",
+      "Clinical Quality Change (2021-2024)": "+3 pts",
+      "Cost per Patient": "$521",
+      "FTE Count (incl. pre/post-grad)": "158"
+    }
+  },
+  {
+    "grantNumber": "H80CS00005",
+    "name": "Placeholder Guam Community Clinic",
+    "state": "Guam",
+    "lat": 13.4443,
+    "lng": 144.7937,
+    "patientCount": 8940,
+    "facts": {
+      "Patient Count": "8,940",
+      "Patient Growth Trend": "+7% since 2021",
+      "Racial/Ethnic Minority Patients": "8,600",
+      "Patients on Public Insurance": "74%",
+      "Patients at 100%+ FPL": "44%",
+      "Served in Language Other Than English": "52%",
+      "Clinical Quality Change (2021-2024)": "+1 pt",
+      "Cost per Patient": "$605",
+      "FTE Count (incl. pre/post-grad)": "61"
+    }
+  }
+]
