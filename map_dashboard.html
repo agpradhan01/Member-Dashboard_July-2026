@@ -3,32 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AAPCHO Member Health Centers</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<title>AAPCHO Member Health Centers Dashboard</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
+  /* ============================================================
+     FONTS — edit these 3 lines to change fonts everywhere on
+     the page. Nothing else needs to change.
+
+     To use a Google Font instead of a system font: add a
+     <link> tag for it above (same pattern as the old Fraunces/
+     Inter/JetBrains Mono setup), then put its name here, e.g.
+     --font-heading: 'Playfair Display', serif;
+     ============================================================ */
   :root{
+    --font-heading: Verdana, Geneva, sans-serif;
+    --font-body: Verdana, Geneva, sans-serif;
+    --font-mono: 'Courier New', Courier, monospace;
+  }
+
+  :root{
+    --color-1:#B2334F;
+    --color-2:#B25833;
+    --color-3:#B29633;
     --paper:#EEF2ED;
     --paper-2:#E4EAE1;
     --ink:#1F2E28;
     --ink-soft:#54655C;
     --line:#CBD5C6;
-    --accent:#3C6E55;
-    --accent-2:#2C5240;
+    --accent:var(--color-1);
+    --accent-2:#7A2337;
     --white:#FBFAF7;
-    --scale-low:#F5E9C8;
-    --scale-mid:#D69A52;
-    --scale-high:#A6412B;
+    --scale-low:var(--color-3);
+    --scale-mid:var(--color-2);
+    --scale-high:var(--color-1);
   }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;height:100%;}
   body{
     background:var(--paper);
     color:var(--ink);
-    font-family:'Inter',sans-serif;
+    font-family:var(--font-body);
     height:100vh;
     display:flex;
     flex-direction:column;
@@ -49,7 +64,7 @@
   }
   #gate.hidden{display:none;}
   #gate .mark{
-    font-family:'Fraunces',serif;
+    font-family:var(--font-heading);
     font-size:15px;
     letter-spacing:0.12em;
     text-transform:uppercase;
@@ -57,7 +72,7 @@
     opacity:0.7;
   }
   #gate h1{
-    font-family:'Fraunces',serif;
+    font-family:var(--font-heading);
     font-weight:500;
     font-size:28px;
     margin:0;
@@ -65,7 +80,7 @@
   }
   #gate form{display:flex;gap:8px;margin-top:6px;}
   #gate input[type=password]{
-    font-family:'JetBrains Mono',monospace;
+    font-family:var(--font-mono);
     font-size:14px;
     padding:12px 14px;
     border-radius:3px;
@@ -77,7 +92,7 @@
   }
   #gate input[type=password]:focus{border-color:var(--accent);}
   #gate button{
-    font-family:'Inter',sans-serif;
+    font-family:var(--font-body);
     font-weight:600;
     font-size:14px;
     padding:12px 18px;
@@ -103,15 +118,19 @@
     z-index:10;
   }
   header.top .eyebrow{
-    font-family:'JetBrains Mono',monospace;
+    font-family:var(--font-mono);
     font-size:11px;
     letter-spacing:0.14em;
     text-transform:uppercase;
-    color:var(--accent-2);
-    margin-bottom:2px;
+    color:var(--white);
+    background:var(--color-2);
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:3px;
+    margin-bottom:6px;
   }
   header.top h1{
-    font-family:'Fraunces',serif;
+    font-family:var(--font-heading);
     font-weight:500;
     font-size:24px;
     margin:0;
@@ -120,7 +139,7 @@
     display:flex;
     align-items:center;
     gap:10px;
-    font-family:'JetBrains Mono',monospace;
+    font-family:var(--font-mono);
     font-size:11px;
     color:var(--ink-soft);
   }
@@ -146,14 +165,14 @@
     padding:20px 22px;
   }
   .card .org-name{
-    font-family:'Fraunces',serif;
+    font-family:var(--font-heading);
     font-weight:500;
     font-size:19px;
     margin:0 0 2px;
     line-height:1.2;
   }
   .card .org-meta{
-    font-family:'JetBrains Mono',monospace;
+    font-family:var(--font-mono);
     font-size:11px;
     color:var(--ink-soft);
     margin-bottom:14px;
@@ -172,7 +191,7 @@
     padding:9px 10px;
   }
   .card .fact .label{
-    font-family:'JetBrains Mono',monospace;
+    font-family:var(--font-mono);
     font-size:9.5px;
     letter-spacing:0.03em;
     text-transform:uppercase;
@@ -181,7 +200,7 @@
     line-height:1.3;
   }
   .card .fact .value{
-    font-family:'Fraunces',serif;
+    font-family:var(--font-heading);
     font-size:15px;
     font-weight:500;
     color:var(--ink);
@@ -218,6 +237,7 @@
   <div>
     <div class="eyebrow">Organization Map</div>
     <h1>AAPCHO Member Health Centers</h1>
+    <h2>Based on 2021-2024 Uniform Data System (UDS) Data</h2>
   </div>
   <div class="legend">
     <span>Fewer patients</span>
@@ -280,8 +300,8 @@ const statusMsg = document.getElementById('statusMsg');
 function colorForCount(count, min, max){
   const t = max > min ? (count - min) / (max - min) : 0.5;
   // interpolate between low (#F5E9C8) and high (#A6412B)
-  const c1 = [245, 233, 200];
-  const c2 = [166, 65, 43];
+  const c1 = [178, 150, 51];  // #B29633 (color-3, mustard) — low end
+  const c2 = [178, 51, 79];   // #B2334F (color-1, rose) — high end
   const r = Math.round(c1[0] + (c2[0]-c1[0]) * t);
   const g = Math.round(c1[1] + (c2[1]-c1[1]) * t);
   const b = Math.round(c1[2] + (c2[2]-c1[2]) * t);
