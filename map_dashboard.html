@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AAPCHO Member Health Centers Dashboard</title>
+<title>AAPCHO Member Health Centers</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
@@ -19,7 +19,7 @@
   :root{
     --font-heading: Verdana, Geneva, sans-serif;
     --font-body: Verdana, Geneva, sans-serif;
-    --font-mono: 'Courier New', Courier, monospace;
+    --font-mono: Verdana, Geneva, sans-serif;
   }
 
   :root{
@@ -116,18 +116,7 @@
     flex-wrap:wrap;
     gap:10px;
     z-index:10;
-  }
-  header.top .eyebrow{
-    font-family:var(--font-mono);
-    font-size:11px;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--white);
-    background:var(--color-2);
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:3px;
-    margin-bottom:6px;
+  
   }
   header.top h1{
     font-family:var(--font-heading);
@@ -146,7 +135,7 @@
   .legend .dots{display:flex;align-items:flex-end;gap:6px;}
   .legend .dot{
     border-radius:50%;
-    background:linear-gradient(135deg, var(--scale-low), var(--scale-high));
+    background:#B25833;
   }
 
   /* ---------- Map ---------- */
@@ -177,15 +166,15 @@
     color:var(--ink-soft);
     margin-bottom:14px;
   }
-  .card .facts{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-    border-radius:5px;
-    overflow:hidden;
-  }
+.card .facts{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:#8A7228;
+  border:1px solid #8A7228;
+  border-radius:5px;
+  overflow:hidden;
+}
   .card .fact{
     background:var(--white);
     padding:9px 10px;
@@ -235,9 +224,8 @@
 
 <header class="top">
   <div>
-    <div class="eyebrow">Organization Map</div>
     <h1>AAPCHO Member Health Centers</h1>
-    <h4>Based on 2021-2024 Uniform Data System (UDS) Data</h4>
+    <div class="data-note">Based on data reported in HRSA Uniform Data System (UDS), 2021-2024 </div>
   </div>
   <div class="legend">
     <span>Fewer patients</span>
@@ -343,7 +331,7 @@ function renderMarkers(orgs){
     const count = Number(org.patientCount) || 0;
     const marker = L.circleMarker([org.lat, org.lng], {
       radius: radiusForCount(count, min, max),
-      fillColor: colorForCount(count, min, max),
+      fillColor: '#B25833',
       fillOpacity: 0.85,
       color: '#FBFAF7',
       weight: 2
