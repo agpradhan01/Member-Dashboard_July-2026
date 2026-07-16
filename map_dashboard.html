@@ -52,7 +52,7 @@
   /* ---------- Password gate (same as profile dashboard) ---------- */
   #gate{
     position:fixed;inset:0;
-    background:var(--ink);
+    background:var(--color-2);
     color:var(--paper);
     display:flex;
     align-items:center;
@@ -84,25 +84,25 @@
     font-size:14px;
     padding:12px 14px;
     border-radius:3px;
-    border:1px solid #445a4f;
-    background:#28382F;
+    border:1px solid #7A3D1F;
+background:#8A4522;
     color:var(--white);
     width:220px;
     outline:none;
   }
   #gate input[type=password]:focus{border-color:var(--accent);}
-  #gate button{
-    font-family:var(--font-body);
-    font-weight:600;
-    font-size:14px;
-    padding:12px 18px;
-    border-radius:3px;
-    border:none;
-    background:var(--accent);
-    color:var(--white);
-    cursor:pointer;
-  }
-  #gate button:hover{background:#4a8267;}
+#gate button{
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:14px;
+  padding:12px 18px;
+  border-radius:3px;
+  border:none;
+  background:var(--color-3);
+  color:var(--ink);
+  cursor:pointer;
+}
+#gate button:hover{background:#8A7228;}
   #gate .err{color:#E0A986;font-size:13px;height:16px;}
 
   /* ---------- Header ---------- */
