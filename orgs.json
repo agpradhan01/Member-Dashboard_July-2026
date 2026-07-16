@@ -15,7 +15,7 @@
       "Served in Language Other Than English": "31%",
       "Clinical Quality Change (2021-2024)": "+6 pts",
       "Cost per Patient": "$682",
-      "FTE Count (incl. pre/post-grad)": "134"
+      "FTE Count": "134"
     }
   },
   {
@@ -34,7 +34,7 @@
       "Served in Language Other Than English": "22%",
       "Clinical Quality Change (2021-2024)": "-2 pts",
       "Cost per Patient": "$714",
-      "FTE Count (incl. pre/post-grad)": "92"
+      "FTE Count": "92"
     }
   },
   {
@@ -53,7 +53,7 @@
       "Served in Language Other Than English": "19%",
       "Clinical Quality Change (2021-2024)": "+11 pts",
       "Cost per Patient": "$599",
-      "FTE Count (incl. pre/post-grad)": "211"
+      "FTE Count": "211"
     }
   },
   {
@@ -72,7 +72,7 @@
       "Served in Language Other Than English": "88%",
       "Clinical Quality Change (2021-2024)": "+3 pts",
       "Cost per Patient": "$521",
-      "FTE Count (incl. pre/post-grad)": "158"
+      "FTE Count": "158"
     }
   },
   {
@@ -91,7 +91,7 @@
       "Served in Language Other Than English": "52%",
       "Clinical Quality Change (2021-2024)": "+1 pt",
       "Cost per Patient": "$605",
-      "FTE Count (incl. pre/post-grad)": "61"
+      "FTE Count": "61"
     }
   }
 ]
