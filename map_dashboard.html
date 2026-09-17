@@ -180,28 +180,6 @@
 </div>
 
 <script>
-/* ============================================================
-   PASSWORD — change before sharing. Light deterrent only.
-   ============================================================ */
-const PASSWORD = "AAPCH0!M3mb3r";
-
-const gate = document.getElementById('gate');
-const gateForm = document.getElementById('gateForm');
-const gatePw = document.getElementById('gatePw');
-const gateErr = document.getElementById('gateErr');
-
-if (sessionStorage.getItem('gate_ok') === '1') gate.classList.add('hidden');
-
-gateForm.addEventListener('submit', function(e){
-  e.preventDefault();
-  if (gatePw.value === PASSWORD) {
-    sessionStorage.setItem('gate_ok', '1');
-    gate.classList.add('hidden');
-  } else {
-    gateErr.textContent = "Incorrect password.";
-    gatePw.value = "";
-  }
-});
 
 /* ============================================================
    MAP SETUP
