@@ -9,14 +9,14 @@
     "facts": {
       "Patient Count": "93680",
       "Patient Growth Trend": "+39.3% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "75009",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "7.9",
       "Patients at or Below 100% FPL": "40.1",
-      "Served in Language Other Than English": "70.6",
-      "Clinical Quality Change (2021-2024)": "+4.3 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "70.6",
+      "Patients Receiving Enabling Services": "+4.3 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -29,14 +29,14 @@
     "facts": {
       "Patient Count": "70051",
       "Patient Growth Trend": "+26.2% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "61628",
-      "Patients on Public Insurance": "6.4",
+      "Patients insured by Medicaid, Medicare, or CHIP": "6.4",
       "Uninsured": "7.8",
       "Patients at or Below 100% FPL": "56.4",
-      "Served in Language Other Than English": "71.3",
-      "Clinical Quality Change (2021-2024)": "+6.1 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "71.3",
+      "Patients Receiving Enabling Services": "+6.1 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -49,14 +49,14 @@
     "facts": {
       "Patient Count": "38932",
       "Patient Growth Trend": "+24.6% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "16064",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "7.2",
       "Patients at or Below 100% FPL": "36.8",
-      "Served in Language Other Than English": "56",
-      "Clinical Quality Change (2021-2024)": "+17.6 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "56",
+      "Patients Receiving Enabling Services": "+17.6 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -69,14 +69,14 @@
     "facts": {
       "Patient Count": "36283",
       "Patient Growth Trend": "+22.2% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "27854",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "3.2",
       "Patients at or Below 100% FPL": "42",
-      "Served in Language Other Than English": "49.6",
-      "Clinical Quality Change (2021-2024)": "+3.1 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "49.6",
+      "Patients Receiving Enabling Services": "+3.1 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -89,14 +89,14 @@
     "facts": {
       "Patient Count": "39682",
       "Patient Growth Trend": "+9.7% since 2021",
+      "Service Delivery Sites": "266.05",
       "Racial/Ethnic Minority Patients": "38561",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "0.8",
       "Patients at or Below 100% FPL": "35.3",
-      "Served in Language Other Than English": "71.2",
-      "Clinical Quality Change (2021-2024)": "+4.2 pts (2021-2024)",
-      "Cost per Patient": "$1,156",
-      "FTE Count (incl. pre/post-grad)": "266.05"
+      "Patients Best Served in Language Other than English": "71.2",
+      "Patients Receiving Enabling Services": "+4.2 pts (2021-2024)",
+      "Cost per Patient": "$1,156"
     }
   },
   {
@@ -109,14 +109,14 @@
     "facts": {
       "Patient Count": "6451",
       "Patient Growth Trend": "+15.3% since 2021",
+      "Service Delivery Sites": "113.2",
       "Racial/Ethnic Minority Patients": "4734",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "7.9",
       "Patients at or Below 100% FPL": "51.5",
-      "Served in Language Other Than English": "3.9",
-      "Clinical Quality Change (2021-2024)": "-1.1 pts (2021-2024)",
-      "Cost per Patient": "$2,401",
-      "FTE Count (incl. pre/post-grad)": "113.2"
+      "Patients Best Served in Language Other than English": "3.9",
+      "Patients Receiving Enabling Services": "-1.1 pts (2021-2024)",
+      "Cost per Patient": "$2,401"
     }
   },
   {
@@ -129,14 +129,14 @@
     "facts": {
       "Patient Count": "13535",
       "Patient Growth Trend": "+33.8% since 2021",
+      "Service Delivery Sites": "161.99",
       "Racial/Ethnic Minority Patients": "8927",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "12.4",
       "Patients at or Below 100% FPL": "54.1",
-      "Served in Language Other Than English": "10",
-      "Clinical Quality Change (2021-2024)": "+6 pts (2021-2024)",
-      "Cost per Patient": "$1,739",
-      "FTE Count (incl. pre/post-grad)": "161.99"
+      "Patients Best Served in Language Other than English": "10",
+      "Patients Receiving Enabling Services": "+6 pts (2021-2024)",
+      "Cost per Patient": "$1,739"
     }
   },
   {
@@ -149,14 +149,14 @@
     "facts": {
       "Patient Count": "28003",
       "Patient Growth Trend": "+5.7% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "26252",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "1.8",
       "Patients at or Below 100% FPL": "43.7",
-      "Served in Language Other Than English": "82.2",
-      "Clinical Quality Change (2021-2024)": "+9.5 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "82.2",
+      "Patients Receiving Enabling Services": "+9.5 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -169,14 +169,14 @@
     "facts": {
       "Patient Count": "10679",
       "Patient Growth Trend": "-1.3% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "8649",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "9.9",
       "Patients at or Below 100% FPL": "58.2",
-      "Served in Language Other Than English": "29.3",
-      "Clinical Quality Change (2021-2024)": "+6 pts (2021-2024)",
-      "Cost per Patient": "$2,772",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "29.3",
+      "Patients Receiving Enabling Services": "+6 pts (2021-2024)",
+      "Cost per Patient": "$2,772"
     }
   },
   {
@@ -189,14 +189,14 @@
     "facts": {
       "Patient Count": "35474",
       "Patient Growth Trend": "+4.3% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "27840",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "11",
       "Patients at or Below 100% FPL": "62.9",
-      "Served in Language Other Than English": "4.7",
-      "Clinical Quality Change (2021-2024)": "+5.9 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "4.7",
+      "Patients Receiving Enabling Services": "+5.9 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -209,14 +209,14 @@
     "facts": {
       "Patient Count": "19961",
       "Patient Growth Trend": "-13.1% since 2021",
+      "Service Delivery Sites": "235.15",
       "Racial/Ethnic Minority Patients": "17137",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "12.1",
       "Patients at or Below 100% FPL": "64.7",
-      "Served in Language Other Than English": "49.7",
-      "Clinical Quality Change (2021-2024)": "+7.8 pts (2021-2024)",
-      "Cost per Patient": "$1,633",
-      "FTE Count (incl. pre/post-grad)": "235.15"
+      "Patients Best Served in Language Other than English": "49.7",
+      "Patients Receiving Enabling Services": "+7.8 pts (2021-2024)",
+      "Cost per Patient": "$1,633"
     }
   },
   {
@@ -229,14 +229,14 @@
     "facts": {
       "Patient Count": "69263",
       "Patient Growth Trend": "+0.5% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "54072",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "12.4",
       "Patients at or Below 100% FPL": "78.8",
-      "Served in Language Other Than English": "52.5",
-      "Clinical Quality Change (2021-2024)": "+10.3 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "52.5",
+      "Patients Receiving Enabling Services": "+10.3 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -249,14 +249,14 @@
     "facts": {
       "Patient Count": "15951",
       "Patient Growth Trend": "+21% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "9218",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "33.5",
       "Patients at or Below 100% FPL": "50.3",
-      "Served in Language Other Than English": "39.5",
-      "Clinical Quality Change (2021-2024)": "+9 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "39.5",
+      "Patients Receiving Enabling Services": "+9 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -269,14 +269,14 @@
     "facts": {
       "Patient Count": "8715",
       "Patient Growth Trend": "+8.8% since 2021",
+      "Service Delivery Sites": "72.43",
       "Racial/Ethnic Minority Patients": "5368",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "16.3",
       "Patients at or Below 100% FPL": "73.7",
-      "Served in Language Other Than English": "5.6",
-      "Clinical Quality Change (2021-2024)": "-13 pts (2021-2024)",
-      "Cost per Patient": "$  701",
-      "FTE Count (incl. pre/post-grad)": "72.43"
+      "Patients Best Served in Language Other than English": "5.6",
+      "Patients Receiving Enabling Services": "-13 pts (2021-2024)",
+      "Cost per Patient": "$  701"
     }
   },
   {
@@ -289,14 +289,14 @@
     "facts": {
       "Patient Count": "74725",
       "Patient Growth Trend": "+79.6% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "27860",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "27.2",
       "Patients at or Below 100% FPL": "32",
-      "Served in Language Other Than English": "38.1",
-      "Clinical Quality Change (2021-2024)": "+7.4 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "38.1",
+      "Patients Receiving Enabling Services": "+7.4 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -309,14 +309,14 @@
     "facts": {
       "Patient Count": "39675",
       "Patient Growth Trend": "+126.4% since 2021",
+      "Service Delivery Sites": "415.09",
       "Racial/Ethnic Minority Patients": "22616",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "6.1",
       "Patients at or Below 100% FPL": "51.1",
-      "Served in Language Other Than English": "5.7",
-      "Clinical Quality Change (2021-2024)": "-2 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "415.09"
+      "Patients Best Served in Language Other than English": "5.7",
+      "Patients Receiving Enabling Services": "-2 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -329,14 +329,14 @@
     "facts": {
       "Patient Count": "4290",
       "Patient Growth Trend": "+2.6% since 2021",
+      "Service Delivery Sites": "36.38",
       "Racial/Ethnic Minority Patients": "4276",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "74.6",
       "Patients at or Below 100% FPL": "90.6",
-      "Served in Language Other Than English": "97.3",
-      "Clinical Quality Change (2021-2024)": "-2.9 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "36.38"
+      "Patients Best Served in Language Other than English": "97.3",
+      "Patients Receiving Enabling Services": "-2.9 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -349,14 +349,14 @@
     "facts": {
       "Patient Count": "2244",
       "Patient Growth Trend": "+14.2% since 2021",
+      "Service Delivery Sites": "42.14",
       "Racial/Ethnic Minority Patients": "1619",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "12.8",
       "Patients at or Below 100% FPL": "2.2",
-      "Served in Language Other Than English": "8.3",
-      "Clinical Quality Change (2021-2024)": "+5.2 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "42.14"
+      "Patients Best Served in Language Other than English": "8.3",
+      "Patients Receiving Enabling Services": "+5.2 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -369,14 +369,14 @@
     "facts": {
       "Patient Count": "31061",
       "Patient Growth Trend": "+19.5% since 2021",
+      "Service Delivery Sites": "238.45",
       "Racial/Ethnic Minority Patients": "24550",
-      "Patients on Public Insurance": "2",
+      "Patients insured by Medicaid, Medicare, or CHIP": "2",
       "Uninsured": "14",
       "Patients at or Below 100% FPL": "20.2",
-      "Served in Language Other Than English": "48.3",
-      "Clinical Quality Change (2021-2024)": "+2 pts (2021-2024)",
-      "Cost per Patient": "$1,095",
-      "FTE Count (incl. pre/post-grad)": "238.45"
+      "Patients Best Served in Language Other than English": "48.3",
+      "Patients Receiving Enabling Services": "+2 pts (2021-2024)",
+      "Cost per Patient": "$1,095"
     }
   },
   {
@@ -389,14 +389,14 @@
     "facts": {
       "Patient Count": "2364",
       "Patient Growth Trend": "-2.6% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "2067",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "9.8",
       "Patients at or Below 100% FPL": "86.8",
-      "Served in Language Other Than English": "86.5",
-      "Clinical Quality Change (2021-2024)": "+0.4 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "86.5",
+      "Patients Receiving Enabling Services": "+0.4 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -409,14 +409,14 @@
     "facts": {
       "Patient Count": "4111",
       "Patient Growth Trend": "-16.2% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "4035",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "33.4",
       "Patients at or Below 100% FPL": "61.3",
-      "Served in Language Other Than English": "69.5",
-      "Clinical Quality Change (2021-2024)": "+5.5 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "69.5",
+      "Patients Receiving Enabling Services": "+5.5 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -429,14 +429,14 @@
     "facts": {
       "Patient Count": "4025",
       "Patient Growth Trend": "+55.4% since 2021",
+      "Service Delivery Sites": "40.32",
       "Racial/Ethnic Minority Patients": "2210",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "3.7",
       "Patients at or Below 100% FPL": "63.9",
-      "Served in Language Other Than English": "57.3",
-      "Clinical Quality Change (2021-2024)": "+2.3 pts (2021-2024)",
-      "Cost per Patient": "$2,556",
-      "FTE Count (incl. pre/post-grad)": "40.32"
+      "Patients Best Served in Language Other than English": "57.3",
+      "Patients Receiving Enabling Services": "+2.3 pts (2021-2024)",
+      "Cost per Patient": "$2,556"
     }
   },
   {
@@ -449,14 +449,14 @@
     "facts": {
       "Patient Count": "15037",
       "Patient Growth Trend": "+28.4% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "7352",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "8.2",
       "Patients at or Below 100% FPL": "74.3",
-      "Served in Language Other Than English": "38.2",
-      "Clinical Quality Change (2021-2024)": "+4.1 pts (2021-2024)",
-      "Cost per Patient": "$1,663",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "38.2",
+      "Patients Receiving Enabling Services": "+4.1 pts (2021-2024)",
+      "Cost per Patient": "$1,663"
     }
   },
   {
@@ -469,14 +469,14 @@
     "facts": {
       "Patient Count": "9908",
       "Patient Growth Trend": "+13.2% since 2021",
+      "Service Delivery Sites": "107.17",
       "Racial/Ethnic Minority Patients": "7181",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "7.3",
       "Patients at or Below 100% FPL": "37.6",
-      "Served in Language Other Than English": "44.9",
-      "Clinical Quality Change (2021-2024)": "+1.6 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "107.17"
+      "Patients Best Served in Language Other than English": "44.9",
+      "Patients Receiving Enabling Services": "+1.6 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -489,14 +489,14 @@
     "facts": {
       "Patient Count": "7701",
       "Patient Growth Trend": "+42.7% since 2021",
+      "Service Delivery Sites": "133.22",
       "Racial/Ethnic Minority Patients": "2973",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "29.6",
       "Patients at or Below 100% FPL": "60.4",
-      "Served in Language Other Than English": "35",
-      "Clinical Quality Change (2021-2024)": "+14.1 pts (2021-2024)",
-      "Cost per Patient": "$5,657",
-      "FTE Count (incl. pre/post-grad)": "133.22"
+      "Patients Best Served in Language Other than English": "35",
+      "Patients Receiving Enabling Services": "+14.1 pts (2021-2024)",
+      "Cost per Patient": "$5,657"
     }
   },
   {
@@ -509,14 +509,14 @@
     "facts": {
       "Patient Count": "3798",
       "Patient Growth Trend": "+55.3% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "1747",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "33.3",
       "Patients at or Below 100% FPL": "0.9",
-      "Served in Language Other Than English": "1.6",
-      "Clinical Quality Change (2021-2024)": "+24.7 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "1.6",
+      "Patients Receiving Enabling Services": "+24.7 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   },
   {
@@ -529,14 +529,14 @@
     "facts": {
       "Patient Count": "8148",
       "Patient Growth Trend": "+105.4% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "4377",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "1.3",
       "Patients at or Below 100% FPL": "4.5",
-      "Served in Language Other Than English": "45.7",
-      "Clinical Quality Change (2021-2024)": "+16.5 pts (2021-2024)",
-      "Cost per Patient": "$2,217",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "45.7",
+      "Patients Receiving Enabling Services": "+16.5 pts (2021-2024)",
+      "Cost per Patient": "$2,217"
     }
   },
   {
@@ -549,14 +549,14 @@
     "facts": {
       "Patient Count": "1969",
       "Patient Growth Trend": "-6.5% since 2021",
+      "Service Delivery Sites": "0",
       "Racial/Ethnic Minority Patients": "1965",
-      "Patients on Public Insurance": "0",
+      "Patients insured by Medicaid, Medicare, or CHIP": "0",
       "Uninsured": "72.6",
       "Patients at or Below 100% FPL": "99.4",
-      "Served in Language Other Than English": "99.8",
-      "Clinical Quality Change (2021-2024)": "+2.6 pts (2021-2024)",
-      "Cost per Patient": "$    0",
-      "FTE Count (incl. pre/post-grad)": "0"
+      "Patients Best Served in Language Other than English": "99.8",
+      "Patients Receiving Enabling Services": "+2.6 pts (2021-2024)",
+      "Cost per Patient": "$    0"
     }
   }
 ]
