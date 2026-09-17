@@ -49,61 +49,7 @@
     flex-direction:column;
   }
 
-  /* ---------- Password gate (same as profile dashboard) ---------- */
-  #gate{
-    position:fixed;inset:0;
-    background:var(--color-2);
-    color:var(--paper);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:2000;
-    flex-direction:column;
-    gap:18px;
-    padding:24px;
-  }
-  #gate.hidden{display:none;}
-  #gate .mark{
-    font-family:var(--font-heading);
-    font-size:15px;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--paper-2);
-    opacity:0.7;
-  }
-  #gate h1{
-    font-family:var(--font-heading);
-    font-weight:500;
-    font-size:28px;
-    margin:0;
-    text-align:center;
-  }
-  #gate form{display:flex;gap:8px;margin-top:6px;}
-  #gate input[type=password]{
-    font-family:var(--font-mono);
-    font-size:14px;
-    padding:12px 14px;
-    border-radius:3px;
-    border:1px solid #7A3D1F;
-background:#8A4522;
-    color:var(--white);
-    width:220px;
-    outline:none;
-  }
-  #gate input[type=password]:focus{border-color:var(--accent);}
-#gate button{
-  font-family:var(--font-body);
-  font-weight:600;
-  font-size:14px;
-  padding:12px 18px;
-  border-radius:3px;
-  border:none;
-  background:var(--color-3);
-  color:var(--ink);
-  cursor:pointer;
-}
-#gate button:hover{background:#8A7228;}
-  #gate .err{color:#E0A986;font-size:13px;height:16px;}
+ 
 
   /* ---------- Header ---------- */
   header.top{
@@ -211,16 +157,6 @@ background:#8A4522;
 </style>
 </head>
 <body>
-
-<div id="gate">
-  <div class="mark">Restricted View</div>
-  <h1>Enter password to continue</h1>
-  <form id="gateForm">
-    <input type="password" id="gatePw" placeholder="Password" autocomplete="off">
-    <button type="submit">Enter</button>
-  </form>
-  <div class="err" id="gateErr"></div>
-</div>
 
 <header class="top">
   <div>
