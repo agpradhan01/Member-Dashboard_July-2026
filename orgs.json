@@ -23,7 +23,7 @@
     "grantNumber": "H80CS00358",
     "name": "CHARLES B. WANG COMMUNITY HEALTH CENTER, INC.",
     "state": "NY",
-    "lat": 40.7127,
+    "lat": 40.7227,
     "lng": -74.006,
     "patientCount": 70051,
     "facts": {
@@ -163,7 +163,7 @@
     "grantNumber": "H80CS00776",
     "name": "KOKUA KALIHI VALLEY COMPREHENSIVE FAMILY SERVICES",
     "state": "HI",
-    "lat": 21.3045,
+    "lat": 21.3145,
     "lng": -157.8557,
     "patientCount": 10679,
     "facts": {
@@ -203,7 +203,7 @@
     "grantNumber": "H80CS00814",
     "name": "KALIHI PALAMA HEALTH CENTER",
     "state": "HI",
-    "lat": 21.3045,
+    "lat": 21.2945,
     "lng": -157.8557,
     "patientCount": 19961,
     "facts": {
@@ -483,7 +483,7 @@
     "grantNumber": "H80CS29016",
     "name": "APICHA COMMUNITY HEALTH CENTER",
     "state": "NY",
-    "lat": 40.7127,
+    "lat": 40.7027,
     "lng": -74.006,
     "patientCount": 7701,
     "facts": {
