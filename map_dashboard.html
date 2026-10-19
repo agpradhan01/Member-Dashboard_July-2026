@@ -141,6 +141,50 @@
     color:var(--ink);
   }
 
+  /* ---------- Search ---------- */
+  .search{
+    position:absolute;
+    top:10px;left:64px;
+    width:min(340px, calc(100vw - 80px));
+    z-index:1000;
+  }
+  .search input{
+    width:100%;
+    font-family:var(--font-body);
+    font-size:13px;
+    color:var(--ink);
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:5px;
+    padding:10px 12px;
+    box-shadow:0 1px 5px rgba(0,0,0,.18);
+    outline:none;
+  }
+  .search input:focus{border-color:var(--color-2);}
+  .search ul{
+    list-style:none;
+    margin:4px 0 0;
+    padding:0;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:5px;
+    box-shadow:0 2px 8px rgba(0,0,0,.2);
+    max-height:320px;
+    overflow-y:auto;
+    display:none;
+  }
+  .search li{
+    padding:9px 12px;
+    cursor:pointer;
+    border-bottom:1px solid var(--paper-2);
+  }
+  .search li:last-child{border-bottom:none;}
+  .search li.active, .search li:hover{background:var(--paper);}
+  .search li .n{font-size:13px;color:var(--ink);line-height:1.3;}
+  .search li .m{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-soft);margin-top:2px;}
+  .search li.none{cursor:default;color:var(--ink-soft);font-size:13px;}
+  .search li.none:hover{background:transparent;}
+
   #statusMsg{
     position:absolute;
     top:16px;left:50%;
@@ -176,6 +220,11 @@
 
 <div id="mapContainer">
   <div id="map"></div>
+  <div class="search">
+    <input id="searchInput" type="search" placeholder="Search by name, grant number or state…"
+           autocomplete="off" aria-label="Search health centers">
+    <ul id="searchResults" role="listbox"></ul>
+  </div>
   <div id="statusMsg"></div>
 </div>
 
@@ -240,6 +289,7 @@ function renderMarkers(orgs){
   const counts = orgs.map(o => Number(o.patientCount) || 0);
   const min = Math.min(...counts);
   const max = Math.max(...counts);
+  const entries = [];   // {org, marker} pairs, used by the search box
 
   orgs.forEach(org => {
     const count = Number(org.patientCount) || 0;
@@ -269,7 +319,91 @@ function renderMarkers(orgs){
     `;
 
     marker.bindPopup(popupHtml, { maxWidth: 360 });
+    entries.push({ org, marker });
   });
+
+  initSearch(entries);
+}
+
+/* ============================================================
+   SEARCH — matches name, grant number or state. Punctuation and
+   case are ignored (so "lanai" finds LANA'I). Picking a result
+   zooms to that health center and opens its card.
+   ============================================================ */
+const norm = s => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+
+function initSearch(entries){
+  const input = document.getElementById('searchInput');
+  const list  = document.getElementById('searchResults');
+  let shown = [];
+  let active = -1;
+
+  entries.forEach(e => {
+    e.key = norm(e.org.name) + ' ' + norm(e.org.grantNumber) + ' ' + norm(e.org.state);
+  });
+
+  function close(){ list.style.display = 'none'; active = -1; }
+
+  function setActive(i){
+    const items = list.querySelectorAll('li[data-i]');
+    items.forEach(li => li.classList.remove('active'));
+    active = i;
+    if (i >= 0 && items[i]){ items[i].classList.add('active'); items[i].scrollIntoView({ block: 'nearest' }); }
+  }
+
+  function render(){
+    const q = norm(input.value);
+    list.innerHTML = '';
+    if (!q){ close(); return; }
+    shown = entries.filter(e => e.key.includes(q)).slice(0, 8);
+    if (!shown.length){
+      const li = document.createElement('li');
+      li.className = 'none';
+      li.textContent = 'No matching health centers';
+      list.appendChild(li);
+    } else {
+      shown.forEach((e, i) => {
+        const li = document.createElement('li');
+        li.dataset.i = i;
+        const n = document.createElement('div'); n.className = 'n'; n.textContent = e.org.name;
+        const m = document.createElement('div'); m.className = 'm';
+        m.textContent = e.org.grantNumber + (e.org.state ? ' · ' + e.org.state : '');
+        li.append(n, m);
+        li.addEventListener('mousedown', ev => { ev.preventDefault(); choose(i); });
+        list.appendChild(li);
+      });
+    }
+    list.style.display = 'block';
+    setActive(shown.length ? 0 : -1);
+  }
+
+  function choose(i){
+    const e = shown[i];
+    if (!e) return;
+    input.value = e.org.name;
+    close();
+    input.blur();
+    const target = L.latLng(e.org.lat, e.org.lng);
+    const zoom = Math.max(map.getZoom(), 7);
+    const open = () => e.marker.openPopup();
+    const there = map.getCenter().distanceTo(target) < 500 && map.getZoom() >= zoom;
+    if (there){ open(); return; }
+    map.once('moveend', open);
+    map.flyTo(target, zoom, { duration: 1.2 });
+  }
+
+  input.addEventListener('input', render);
+  input.addEventListener('focus', render);
+  input.addEventListener('blur', () => setTimeout(close, 100));
+  input.addEventListener('keydown', ev => {
+    if (ev.key === 'ArrowDown'){ ev.preventDefault(); if (shown.length) setActive((active + 1) % shown.length); }
+    else if (ev.key === 'ArrowUp'){ ev.preventDefault(); if (shown.length) setActive((active - 1 + shown.length) % shown.length); }
+    else if (ev.key === 'Enter'){ ev.preventDefault(); if (active >= 0) choose(active); }
+    else if (ev.key === 'Escape'){ input.value = ''; close(); input.blur(); }
+  });
+  // keep map drag/scroll from firing when interacting with the search box
+  L.DomEvent.disableClickPropagation(input.parentElement);
+  L.DomEvent.disableScrollPropagation(list);
 }
 
 loadData();
