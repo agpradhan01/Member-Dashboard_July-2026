@@ -1,7 +1,7 @@
 [
   {
     "grantNumber": "H80CS00221",
-    "name": "NORTH EAST MEDICAL SERVICES",
+    "name": "North East Medical Services",
     "state": "CA",
     "lat": 37.7879,
     "lng": -122.4075,
@@ -25,7 +25,7 @@
   },
   {
     "grantNumber": "H80CS00358",
-    "name": "CHARLES B. WANG COMMUNITY HEALTH CENTER, INC.",
+    "name": "Charles B. Wang Community Health Center",
     "state": "NY",
     "lat": 40.7227,
     "lng": -74.006,
@@ -73,7 +73,7 @@
   },
   {
     "grantNumber": "H80CS00437",
-    "name": "INTERNATIONAL  COMMUNITY HEALTH SERVICES",
+    "name": "International Community Health Services",
     "state": "WA",
     "lat": 47.6038,
     "lng": -122.3301,
@@ -97,7 +97,7 @@
   },
   {
     "grantNumber": "H80CS00600",
-    "name": "SOUTH COVE COMMUNITY HEALTH CTR, INC.",
+    "name": "South Cove Community Health Center",
     "state": "MA",
     "lat": 42.3588,
     "lng": -71.0578,
@@ -121,7 +121,7 @@
   },
   {
     "grantNumber": "H80CS00646",
-    "name": "WAIMANALO HEALTH CENTER",
+    "name": "Waimānalo Health Center",
     "state": "HI",
     "lat": 21.3463,
     "lng": -157.7211,
@@ -169,7 +169,7 @@
   },
   {
     "grantNumber": "H80CS00773",
-    "name": "ASIAN HEALTH SERVICES",
+    "name": "Asian Health Services",
     "state": "CA",
     "lat": 37.8045,
     "lng": -122.2714,
@@ -217,7 +217,7 @@
   },
   {
     "grantNumber": "H80CS00807",
-    "name": "WAIANAE DISTRICT COMP HLTH & HOSPITAL BOARD, INC.",
+    "name": "Waianae Cost Comprehensive Health Center",
     "state": "HI",
     "lat": 21.4455,
     "lng": -158.1878,
@@ -241,7 +241,7 @@
   },
   {
     "grantNumber": "H80CS00814",
-    "name": "KALIHI PALAMA HEALTH CENTER",
+    "name": "Kalihi-Palama Health Center",
     "state": "HI",
     "lat": 21.2945,
     "lng": -157.8557,
@@ -313,7 +313,7 @@
   },
   {
     "grantNumber": "H80CS02468",
-    "name": "GUAM DEPARTMENT OF PUBLIC HEALTH",
+    "name": "Guam Community Health Centers",
     "state": "GU",
     "lat": 13.4739,
     "lng": 144.7521,
@@ -361,7 +361,7 @@
   },
   {
     "grantNumber": "H80CS06640",
-    "name": "WEST HAWAII COMMUNITY HEALTH CENTER, INC",
+    "name": "Hawai'i Island Community Health Center",
     "state": "HI",
     "lat": 19.6419,
     "lng": -155.9969,
@@ -385,7 +385,7 @@
   },
   {
     "grantNumber": "H80CS06653",
-    "name": "WA'AB CHC/YAP STATE DEPT OF HEALTH SERVICES",
+    "name": "Wa'ab Community Health Center",
     "state": "FM",
     "lat": 9.5463,
     "lng": 138.1652,
@@ -457,7 +457,7 @@
   },
   {
     "grantNumber": "H80CS26574",
-    "name": "ASIAN SERVICES IN ACTION, INC",
+    "name": "Asian Services in Action",
     "state": "OH",
     "lat": 41.0831,
     "lng": -81.5185,
@@ -481,7 +481,7 @@
   },
   {
     "grantNumber": "H80CS26582",
-    "name": "MQVN COMMUNITY DEVELOPMENT CORP",
+    "name": "NOELA Community Health Center",
     "state": "LA",
     "lat": 29.9561,
     "lng": -90.0734,
@@ -601,7 +601,7 @@
   },
   {
     "grantNumber": "H80CS31624",
-    "name": "KAGMAN COMMUNITY HEALTH CENTR E, INC",
+    "name": "Kagman Community Health Center, Inc.",
     "state": "MP",
     "lat": 15.191,
     "lng": 145.7467,
@@ -649,7 +649,7 @@
   },
   {
     "grantNumber": "H80CS35350",
-    "name": "KOSRAE COMMUNITY HEALTH CENTER",
+    "name": "Kosrae Community Health Center",
     "state": "FM",
     "lat": 5.3143,
     "lng": 162.9811,
